@@ -203,3 +203,82 @@ h1 {
   white-space: nowrap;
 }
 
+.page {
+  /* background-image: url('/img/test2.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; */
+}
+
+.hero_text {
+  padding: 40px;
+  color: green;
+
+  border-image-source: url('/img/test2.png');
+  border-image-width: 10% 10%;
+  border-image-slice: 10% 10%;
+}
+
+.card_block {
+  /* list-style-type: upper-roman; */
+  list-style-position: inside;
+
+  list-style-image: linear-gradient(
+    to bottom right,
+    blue,
+    red
+  );
+
+  padding: 0;
+}
+
+.card_description_item {
+  display: list-item;
+}
+
+/* .table tr {
+  border: 1px solid #343A40;
+} */
+
+.table tr td {
+  border: 1px solid #4f6983;
+  border-bottom-color: red;
+  border-right-color: blue;
+}
+
+.table {
+  table-layout: fixed;
+  width: 600px;
+
+  border-collapse: unset;
+
+  caption-side: top;
+
+  empty-cells: hide;
+}
+
+.nav_link::before,
+.nav_link::after {
+  /* content: url('/img/test2.png'); */
+
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-image: url('/img/test2.png');
+}
+
+.nav_link::before {
+  margin-right: 15px;
+}
+
+.nav_link::after {
+  margin-left: 15px;
+}
+
+.calc {
+  width: 600px;
+
+  margin-right: calc(100% - 600px);
+}
+
