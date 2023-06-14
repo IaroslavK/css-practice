@@ -1,0 +1,55 @@
+<header class="headerDark">
+    {{#with header}}
+    <div class="header_nav">
+
+        <div class="logo">
+            <span class="badge">{{brandName}}</span>
+        </div>
+
+        <div class="header_nav_right">
+            <div class="nav {{#if isVertical}}nav_vertical{{else}}nav_inline{{/if}}">
+                {{#each links}}
+                <a href="{{url}}" class="nav_link">{{text}}</a>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="header_under">
+        <div class="header_under_logo">
+            <span class="badge text-bg-primary">Ad</span>
+        </div>
+    </div>
+    {{/with}}
+</header>
+
+
+
+<footer class="footer">
+    <div>
+        {{>logo}}
+        <span class="footer_copyright"> Copyright 2023-2024</span>
+    </div>
+    {{#each footer}}
+    <div>
+        <span class="footer_title">{{title}}</span>
+        {{>nav list=links isVertical=true}}
+    </div>
+    {{/each}}
+</footer>
+
+<div class="expirience">
+    {{#with expirience}}
+    <strong class="exp_title">{{title}}</strong>
+    <div class="exp_block">
+        {{#each list}}
+        <div class="exp_list">
+            <p class="exp_name">{{name}}</p>
+            <p class="exp_details">{{details}}</p>
+        </div>
+        {{/each}}
+    </div>
+    {{/with}}
+</div>

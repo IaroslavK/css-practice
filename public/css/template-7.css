@@ -1,0 +1,156 @@
+:root {
+  --space-s: 8px;
+  --space-m: 12px;
+  --space-xm: 16px;
+  --space-l: 24px;
+  --space-b: 36px;
+
+  --size-s: 14px;
+  --size-d: 16px;
+  --size-l: 20px;
+  --size-b: 24px;
+
+  --color-background: #111827;
+  --color-border: #DEE2E6;
+  --color-primary: rgb(46,46,255);
+  --color-white: #fff;
+  --color-title: #212529;
+  --color-text: #343A40;
+  --color-text2: #6C757D;
+
+  --border-radius-d: 12px;
+  --border-radius-s: 4px;
+
+  --weight-title: 600;
+  --weight-text: 400;
+
+  --page-width:1000px;
+}
+
+/* ========================== */
+
+.page {
+  background: var(--color-background);
+  padding: 0 15px;
+  
+  display: flex;
+  justify-content: center;
+}
+
+.page_content {
+  max-width: var(--page-width);
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 80px;
+  
+  padding-top: 74px;
+}
+
+/* ========================== */
+
+.headerDark {
+  padding: var(--space-l);
+  border-bottom: 1px solid var(--color-border);
+
+  display: grid;
+
+  position: fixed;
+
+  /* width: var(--page-width); */
+
+  top:0;
+  left:calc(50% - var(--page-width) / 2);
+
+  background-color: var(--color-background);
+  z-index: 1;
+}
+
+.header_nav {
+  
+}
+
+.header_nav_right {
+
+}
+
+.logo {
+  
+  font-size: 14px;
+  color: var(--color-white);
+
+  background: #885FFB;
+
+  width: 56px;
+  height: 30px;
+
+  border-radius: calc(var(--border-radius-d)/2);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.nav {
+  display: grid;
+  max-width: 80px;
+  
+}
+
+.nav_inline {
+  gap: var(--space-l);
+}
+
+.nav_vertical {
+  gap: var(--space-xm);
+  flex-direction: column;
+}
+
+.nav_link {
+  color: var(--color-white);
+  font-size: var(--size-d);
+  text-decoration: none;
+
+  line-height: 100%;
+
+  transition-property: color;
+  transition-duration: 1s;
+}
+
+.nav_link:hover {
+  text-decoration: underline;
+  color:var(--color-primary);
+}
+
+.header_under {
+  border-top: 1px solid var(--color-border);
+}
+
+.footer {
+  padding: var(--space-l);
+
+  border-top: 1px solid var(--color-border);
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_copyright {
+  font-size: var(--size-s);
+  color: var(--color-text);
+
+  display: block;
+  margin-top: var(--space-l);
+}
+
+.footer_title {
+  font-size: var(--size-l);
+  color:var(--color-title);
+
+  display: block;
+  margin-bottom: var(--space-l);
+}
+
